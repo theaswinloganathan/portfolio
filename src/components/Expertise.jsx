@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, Lightbulb, BarChart3, Target, Leaf, X, ChevronRight } from 'lucide-react';
+import { Activity, Cpu, TrendingUp, Search, Globe, X, ChevronRight } from 'lucide-react';
 
 const AreasofSpecialization = [
   {
     id: 1,
     title: "Process Excellence",
     description: "I help businesses identify inefficiencies and streamline operations to increase quality and reduce costs.",
-    icon: <ShieldCheck className="w-8 h-8" />,
-    color: "bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400 border-emerald-100 dark:border-emerald-800",
+    icon: <Activity className="w-8 h-8" />,
+    color: "bg-gray-50/50 dark:bg-white/5 text-accentGold border-gray-100 dark:border-white/10",
     details: [
       "Optimize workflows using Lean Six Sigma to eliminate bottlenecks and inefficiencies.",
       "Enhance organizational speed and output quality through rigorous process improvement.",
@@ -19,8 +19,8 @@ const AreasofSpecialization = [
     id: 2,
     title: "Innovation Strategy",
     description: "Using Design Thinking to create products and services that solve real customer problems and drive growth.",
-    icon: <Lightbulb className="w-8 h-8" />,
-    color: "bg-amber-50 text-amber-600 dark:bg-amber-900/20 dark:text-amber-400 border-amber-100 dark:border-amber-800",
+    icon: <Cpu className="w-8 h-8" />,
+    color: "bg-gray-50/50 dark:bg-white/5 text-accentGold border-gray-100 dark:border-white/10",
     details: [
       "Accelerate the innovation cycle using human-centered Design Thinking methodologies.",
       "Develop user-centric solutions through empathy-driven research and rapid prototyping.",
@@ -31,8 +31,8 @@ const AreasofSpecialization = [
     id: 3,
     title: "Business Growth",
     description: "Developing clear, actionable strategic roadmaps that help organizations secure market advantage.",
-    icon: <BarChart3 className="w-8 h-8" />,
-    color: "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400 border-blue-100 dark:border-blue-800",
+    icon: <TrendingUp className="w-8 h-8" />,
+    color: "bg-gray-50/50 dark:bg-white/5 text-accentGold border-gray-100 dark:border-white/10",
     details: [
       "Conduct in-depth market analysis to build robust, data-driven growth strategies.",
       "Create actionable strategic roadmaps that drive sustainable revenue and expansion.",
@@ -43,8 +43,8 @@ const AreasofSpecialization = [
     id: 4,
     title: "Consumer Insights",
     description: "Turning complex market data into clear insights that help you make better business decisions.",
-    icon: <Target className="w-8 h-8" />,
-    color: "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400 border-indigo-100 dark:border-indigo-800",
+    icon: <Search className="w-8 h-8" />,
+    color: "bg-gray-50/50 dark:bg-white/5 text-accentGold border-gray-100 dark:border-white/10",
     details: [
       "Design comprehensive research studies to identify and validate true consumer needs.",
       "Translate raw market data into high-level, actionable strategic recommendations.",
@@ -55,8 +55,8 @@ const AreasofSpecialization = [
     id: 5,
     title: "Sustainable Impact",
     description: "Aligning your business goals with global sustainability standards to drive positive social change.",
-    icon: <Leaf className="w-8 h-8" />,
-    color: "bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400 border-green-100 dark:border-green-800",
+    icon: <Globe className="w-8 h-8" />,
+    color: "bg-gray-50/50 dark:bg-white/5 text-accentGold border-gray-100 dark:border-white/10",
     details: [
       "Integrate UN Sustainable Development Goals (SDGs) seamlessly into core business operations.",
       "Strengthen brand reputation and trust through demonstrated social and environmental responsibility.",
