@@ -81,6 +81,7 @@ const About = () => {
             <div className="pt-2 sm:pt-4">
               <a
                 href="/cv/Dr_Vimalnath_Profile.pdf"
+                download="Dr_Vimalnath_Profile.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 sm:gap-2 text-accentGold font-bold hover:text-yellow-600 transition-colors group"
