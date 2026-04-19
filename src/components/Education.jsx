@@ -102,10 +102,10 @@ const Education = () => {
                   <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1/2 bg-accentGold rounded-r-full" />
                 )}
                 <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 ${
-                    isPhD ? 'bg-accentGold shadow-lg shadow-accentGold/30 text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 border-2 transition-all duration-300 ${
+                    isPhD ? 'bg-accentGold/5 border-accentGold/30 text-accentGold shadow-lg shadow-accentGold/10' : 'bg-gray-50/50 dark:bg-white/5 border-gray-100 dark:border-white/10 text-accentGold'
                   }`}>
-                    {isPhD ? React.cloneElement(edu.icon, { className: "w-6 h-6 text-white" }) : edu.icon}
+                    {React.cloneElement(edu.icon, { className: "w-6 h-6 text-accentGold" })}
                   </div>
 
                   <div className="flex-grow">
