@@ -69,7 +69,7 @@ const Expertise = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   return (
-    <section id="expertise" className="py-24 bg-gray-50 dark:bg-[#0a0f1d] border-t border-accentGold/20">
+    <section id="expertise" className="py-24 bg-gray-50 dark:bg-[#0a0f1d] border-t-2 border-accentGold/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2

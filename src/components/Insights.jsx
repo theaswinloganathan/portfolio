@@ -28,7 +28,7 @@ const insights = [
 
 const Insights = () => {
   return (
-    <section id="insights" className="py-24 bg-gray-50 dark:bg-[#0a0f1d] border-t border-accentGold/20 overflow-hidden">
+    <section id="insights" className="py-24 bg-gray-50 dark:bg-[#0a0f1d] border-t-2 border-accentGold/30 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center mb-16 gap-8 text-center max-w-4xl mx-auto">
           <div className="space-y-4">
