@@ -38,7 +38,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-4xl font-serif font-bold text-gray-900 dark:text-white mb-4"
           >
-            Get in Touch
+            Get in <span className="text-accentGold">Touch</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

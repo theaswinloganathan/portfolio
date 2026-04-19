@@ -152,7 +152,7 @@ const Certifications = () => {
             viewport={{ once: true }}
             className="text-4xl font-serif font-bold text-gray-900 dark:text-white mb-4"
           >
-            Credentials & Certifications
+            Credentials & <span className="text-accentGold">Certifications</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

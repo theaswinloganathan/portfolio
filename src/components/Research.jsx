@@ -37,7 +37,7 @@ const Research = () => {
             viewport={{ once: true }}
             className="text-4xl font-serif font-bold text-gray-900 dark:text-white mb-4"
           >
-            Research & Collaboration
+            Research & <span className="text-accentGold">Collaboration</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

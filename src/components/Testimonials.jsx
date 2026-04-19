@@ -48,7 +48,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             className="text-4xl font-serif font-bold text-gray-900 dark:text-white mb-4"
           >
-            Testimonials & Impact
+            Testimonials & <span className="text-accentGold">Impact</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

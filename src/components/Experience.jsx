@@ -89,7 +89,7 @@ const Experience = () => {
             viewport={{ once: true }}
             className="text-4xl font-serif font-bold text-gray-900 dark:text-white mb-4"
           >
-            Professional Experience
+            Professional <span className="text-accentGold">Experience</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

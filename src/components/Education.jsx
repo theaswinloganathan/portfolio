@@ -71,7 +71,7 @@ const Education = () => {
             viewport={{ once: true }}
             className="text-4xl font-serif font-bold text-gray-900 dark:text-white mb-4"
           >
-            Education & Academic Qualifications
+            Education & Academic <span className="text-accentGold">Qualifications</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
