@@ -104,7 +104,7 @@ const Experience = () => {
 
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800" />
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -118,10 +118,10 @@ const Experience = () => {
                   }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white dark:border-dark bg-accentGold z-10" />
+                <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white dark:border-dark bg-accentGold z-10" />
 
                 {/* Content Card */}
-                <div className={`w-full md:w-[45%] ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'} pl-8`}>
+                <div className={`w-full md:w-[45%] ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'} pl-12 md:pl-0`}>
                   <div className={`p-8 rounded-3xl bg-gray-50 dark:bg-[#0a0f1d] border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-2xl transition-all duration-300 group ${exp.isCurrent ? 'ring-2 ring-accentGold ring-offset-4 ring-offset-white dark:ring-offset-dark' : ''}`}>
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                       <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-accentGold/10 text-accentGold">

@@ -39,7 +39,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl md:text-7xl font-serif font-black text-gray-900 dark:text-white leading-[1.1] tracking-tight"
+              className="text-4xl sm:text-5xl md:text-7xl font-serif font-black text-gray-900 dark:text-white leading-[1.1] tracking-tight"
             >
               Dr. Vimalnath <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accentGold via-yellow-500 to-accentGold animate-gradient-x">

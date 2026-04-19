@@ -94,6 +94,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   {link.name}
                 </a>
               ))}
+              <div className="pt-4 mt-4 border-t border-gray-100 dark:border-gray-800">
+                <a href="tel:+919500034681" className="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-dark dark:bg-white text-white dark:text-dark font-bold">
+                  Call Now
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

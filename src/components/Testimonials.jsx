@@ -73,7 +73,7 @@ const Testimonials = () => {
             >
               <div className="flex flex-col h-full">
                 {/* Image Section */}
-                <div className="relative h-96 overflow-hidden">
+                <div className="relative h-64 md:h-96 overflow-hidden">
                   <img 
                     src={item.image} 
                     alt={item.title} 
