@@ -54,11 +54,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               >
                 {darkMode ? <Sun className="w-5 h-5 text-gray-300" /> : <Moon className="w-5 h-5 text-gray-700" />}
               </button>
-              <div className="flex items-center gap-3">
-                <span className="text-sm font-bold text-gray-500 dark:text-gray-400 hidden xl:block">
-                  +91-9500034681
-                </span>
-                <a href="tel:+919500034681" className="px-5 py-2 rounded-full bg-dark dark:bg-white text-white dark:text-dark font-medium hover:bg-accentGold dark:hover:bg-accentGold hover:text-white transition-colors whitespace-nowrap">
+              <div className="flex items-center">
+                <a href="tel:+919500034681" className="px-6 py-2 rounded-full bg-dark dark:bg-white text-white dark:text-dark font-bold hover:bg-accentGold dark:hover:bg-accentGold hover:text-white transition-all shadow-lg active:scale-95 whitespace-nowrap">
                   Call Now
                 </a>
               </div>
@@ -102,8 +99,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 </a>
               ))}
               <div className="pt-4 mt-4 border-t border-gray-100 dark:border-gray-800">
-                <a href="tel:+919500034681" className="flex flex-col items-center gap-2 w-full py-4 rounded-xl bg-dark dark:bg-white text-white dark:text-dark font-bold">
-                  <span className="text-xs opacity-60">+91-9500034681</span>
+                <a href="tel:+919500034681" className="flex items-center justify-center w-full py-4 rounded-xl bg-dark dark:bg-white text-white dark:text-dark font-bold shadow-md active:scale-[0.98] transition-all">
                   Call Now
                 </a>
               </div>
