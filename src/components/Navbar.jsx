@@ -29,41 +29,43 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-dark/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="font-serif text-2xl font-bold dark:text-white">
+          <div className="flex-shrink-0 flex items-center pr-8">
+            <a href="#" className="font-serif text-2xl font-bold dark:text-white whitespace-nowrap">
               Dr. Vimalnath
             </a>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-accentGold dark:hover:text-accentGold transition-colors text-sm font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-accentGold dark:hover:text-accentGold transition-colors text-sm font-medium whitespace-nowrap"
               >
                 {link.name}
               </a>
             ))}
             
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label="Toggle Dark Mode"
-            >
-              {darkMode ? <Sun className="w-5 h-5 text-gray-300" /> : <Moon className="w-5 h-5 text-gray-700" />}
-            </button>
-            <div className="flex items-center gap-3">
-              <span className="text-sm font-bold text-gray-500 dark:text-gray-400 border-r border-gray-200 dark:border-gray-700 pr-3 hidden lg:block">
-                +91-9500034681
-              </span>
-              <a href="tel:+919500034681" className="px-5 py-2 rounded-full bg-dark dark:bg-white text-white dark:text-dark font-medium hover:bg-accentGold dark:hover:bg-accentGold hover:text-white transition-colors">
-                Call Now
-              </a>
+            <div className="flex items-center gap-4 pl-4 border-l border-gray-200 dark:border-gray-800">
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                aria-label="Toggle Dark Mode"
+              >
+                {darkMode ? <Sun className="w-5 h-5 text-gray-300" /> : <Moon className="w-5 h-5 text-gray-700" />}
+              </button>
+              <div className="flex items-center gap-3">
+                <span className="text-sm font-bold text-gray-500 dark:text-gray-400 hidden xl:block">
+                  +91-9500034681
+                </span>
+                <a href="tel:+919500034681" className="px-5 py-2 rounded-full bg-dark dark:bg-white text-white dark:text-dark font-medium hover:bg-accentGold dark:hover:bg-accentGold hover:text-white transition-colors whitespace-nowrap">
+                  Call Now
+                </a>
+              </div>
             </div>
           </div>
           
-          <div className="md:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center gap-4">
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -86,7 +88,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-dark border-t border-gray-100 dark:border-gray-800"
+            className="lg:hidden bg-white dark:bg-dark border-t border-gray-100 dark:border-gray-800"
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
               {navLinks.map((link) => (
