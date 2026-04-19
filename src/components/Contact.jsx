@@ -143,7 +143,7 @@ const Contact = () => {
                       type="text"
                       required
                       className="w-full px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-[#0a0f1d] text-gray-900 dark:text-white focus:ring-2 focus:ring-accentGold focus:border-transparent transition-all outline-none"
-                      placeholder="John"
+                      placeholder="e.g. John"
                     />
                   </div>
                   <div>
@@ -154,7 +154,7 @@ const Contact = () => {
                       type="text"
                       required
                       className="w-full px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-[#0a0f1d] text-gray-900 dark:text-white focus:ring-2 focus:ring-accentGold focus:border-transparent transition-all outline-none"
-                      placeholder="Doe"
+                      placeholder="e.g. Doe"
                     />
                   </div>
                 </div>
@@ -166,7 +166,7 @@ const Contact = () => {
                     type="email"
                     required
                     className="w-full px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-[#0a0f1d] text-gray-900 dark:text-white focus:ring-2 focus:ring-accentGold focus:border-transparent transition-all outline-none"
-                    placeholder="john@example.com"
+                    placeholder="e.g. john@example.com"
                   />
                 </div>
                 <div>
@@ -177,7 +177,7 @@ const Contact = () => {
                     rows="5"
                     required
                     className="w-full px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-[#0a0f1d] text-gray-900 dark:text-white focus:ring-2 focus:ring-accentGold focus:border-transparent transition-all outline-none resize-none"
-                    placeholder="How can we collaborate?"
+                    placeholder="e.g. How can we collaborate?"
                   ></textarea>
                 </div>
                 {status === 'error' && (
