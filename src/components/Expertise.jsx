@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Target, Lightbulb, TrendingUp, BarChart3, Globe, X } from 'lucide-react';
+import { ShieldCheck, Lightbulb, BarChart3, Target, Leaf, X, ChevronRight } from 'lucide-react';
 
 const AreasofSpecialization = [
   {
     id: 1,
     title: "Process Excellence",
     description: "I help businesses identify inefficiencies and streamline operations to increase quality and reduce costs.",
-    icon: <Target className="w-8 h-8" />,
-    color: "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400",
+    icon: <ShieldCheck className="w-8 h-8" />,
+    color: "bg-emerald-50 text-emerald-600 dark:bg-emerald-900/20 dark:text-emerald-400 border-emerald-100 dark:border-emerald-800",
     details: [
       "Optimize workflows using Lean Six Sigma to eliminate bottlenecks and inefficiencies.",
       "Enhance organizational speed and output quality through rigorous process improvement.",
@@ -20,7 +20,7 @@ const AreasofSpecialization = [
     title: "Innovation Strategy",
     description: "Using Design Thinking to create products and services that solve real customer problems and drive growth.",
     icon: <Lightbulb className="w-8 h-8" />,
-    color: "bg-yellow-50 text-yellow-600 dark:bg-yellow-900/20 dark:text-yellow-400",
+    color: "bg-amber-50 text-amber-600 dark:bg-amber-900/20 dark:text-amber-400 border-amber-100 dark:border-amber-800",
     details: [
       "Accelerate the innovation cycle using human-centered Design Thinking methodologies.",
       "Develop user-centric solutions through empathy-driven research and rapid prototyping.",
@@ -31,8 +31,8 @@ const AreasofSpecialization = [
     id: 3,
     title: "Business Growth",
     description: "Developing clear, actionable strategic roadmaps that help organizations secure market advantage.",
-    icon: <TrendingUp className="w-8 h-8" />,
-    color: "bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400",
+    icon: <BarChart3 className="w-8 h-8" />,
+    color: "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400 border-blue-100 dark:border-blue-800",
     details: [
       "Conduct in-depth market analysis to build robust, data-driven growth strategies.",
       "Create actionable strategic roadmaps that drive sustainable revenue and expansion.",
@@ -43,8 +43,8 @@ const AreasofSpecialization = [
     id: 4,
     title: "Consumer Insights",
     description: "Turning complex market data into clear insights that help you make better business decisions.",
-    icon: <BarChart3 className="w-8 h-8" />,
-    color: "bg-purple-50 text-purple-600 dark:bg-purple-900/20 dark:text-purple-400",
+    icon: <Target className="w-8 h-8" />,
+    color: "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400 border-indigo-100 dark:border-indigo-800",
     details: [
       "Design comprehensive research studies to identify and validate true consumer needs.",
       "Translate raw market data into high-level, actionable strategic recommendations.",
@@ -55,8 +55,8 @@ const AreasofSpecialization = [
     id: 5,
     title: "Sustainable Impact",
     description: "Aligning your business goals with global sustainability standards to drive positive social change.",
-    icon: <Globe className="w-8 h-8" />,
-    color: "bg-teal-50 text-teal-600 dark:bg-teal-900/20 dark:text-teal-400",
+    icon: <Leaf className="w-8 h-8" />,
+    color: "bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400 border-green-100 dark:border-green-800",
     details: [
       "Integrate UN Sustainable Development Goals (SDGs) seamlessly into core business operations.",
       "Strengthen brand reputation and trust through demonstrated social and environmental responsibility.",
@@ -101,20 +101,20 @@ const Expertise = () => {
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10, scale: 1.02 }}
               onClick={() => setSelectedItem(item)}
-              className="bg-white dark:bg-[#0a0f1d] p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all cursor-pointer border border-gray-100 dark:border-gray-800"
+              className="group bg-white dark:bg-[#0a0f1d] p-8 rounded-3xl shadow-sm hover:shadow-2xl transition-all cursor-pointer border border-gray-100 dark:border-gray-800"
             >
-              <div className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${item.color}`}>
+              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border-2 transition-transform group-hover:scale-110 group-hover:rotate-3 shadow-lg ${item.color}`}>
                 {item.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 font-serif">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 font-serif group-hover:text-accentGold transition-colors">
                 {item.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 line-clamp-3">
+              <p className="text-gray-600 dark:text-gray-400 line-clamp-3 leading-relaxed">
                 {item.description}
               </p>
-              <p className="mt-4 text-accentBlue text-sm font-medium flex items-center">
-                Learn more <span className="ml-1">→</span>
-              </p>
+              <div className="mt-6 flex items-center text-accentBlue group-hover:text-accentGold text-sm font-bold transition-colors">
+                Explore Expertise <ChevronRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
             </motion.div>
           ))}
         </div>
@@ -131,11 +131,11 @@ const Expertise = () => {
             >
               <button
                 onClick={() => setSelectedItem(null)}
-                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+                className="absolute top-6 right-6 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-all active:scale-90"
               >
                 <X className="w-6 h-6" />
               </button>
-              <div className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${selectedItem.color}`}>
+              <div className={`w-20 h-20 rounded-2xl flex items-center justify-center mb-8 border-2 shadow-xl ${selectedItem.color}`}>
                 {selectedItem.icon}
               </div>
               <h3 className="text-3xl font-serif font-bold text-gray-900 dark:text-white mb-4">
