@@ -30,8 +30,8 @@ const Insights = () => {
   return (
     <section id="insights" className="py-24 bg-gray-50 dark:bg-[#0a0f1d] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 text-center md:text-left">
-          <div className="max-w-2xl">
+        <div className="flex flex-col items-center justify-center mb-16 gap-8 text-center max-w-4xl mx-auto">
+          <div className="space-y-4">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -51,12 +51,13 @@ const Insights = () => {
             </motion.p>
           </div>
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
           >
-            <a href="#contact" className="inline-flex items-center gap-2 text-dark dark:text-white font-bold hover:text-accentGold transition-colors group">
-              Speak to the Expert <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=prof.vimalnath@gmail.com&su=Consultation%20Inquiry" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-dark dark:bg-white text-white dark:text-dark font-bold hover:bg-accentGold dark:hover:bg-accentGold hover:text-white transition-all group shadow-lg">
+              Speak to the Expert <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </a>
           </motion.div>
         </div>
