@@ -6,7 +6,7 @@ const About = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const paragraph1 = "Dr. Vimalnath Venkatasubramanian is an academician, researcher, and strategic consultant specializing in business management, leadership development, and innovation. With a strong foundation in Management Studies, he combines academic excellence with practical industry insights to support data-driven decision-making and sustainable organizational growth.";
-  
+
   const paragraph2 = "His expertise in Lean Six Sigma and Design Thinking enables the transformation of complex ideas into effective strategies and measurable outcomes. Through research, consultancy, and mentorship, he is committed to developing future-ready leaders and contributing to academic advancement, industry collaboration, and innovation-driven education.";
 
   return (
@@ -23,14 +23,14 @@ const About = () => {
             <h2 className="text-xl sm:text-4xl font-serif font-bold text-gray-900 dark:text-white leading-tight">
               Turning Strategic Ideas into <span className="text-accentGold">Measurable Results</span>
             </h2>
-            
+
             <div className="relative">
               {/* Mobile View: Truncated or Full Based on State */}
               <div className="lg:hidden">
                 <p className="text-[10px] sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                   {isExpanded ? paragraph1 : `${paragraph1.slice(0, 80)}...`}
                 </p>
-                
+
                 <AnimatePresence>
                   {isExpanded && (
                     <motion.p
@@ -43,8 +43,8 @@ const About = () => {
                     </motion.p>
                   )}
                 </AnimatePresence>
-                
-                <button 
+
+                <button
                   onClick={() => setIsExpanded(!isExpanded)}
                   className="flex items-center gap-1 mt-2 text-[10px] sm:text-sm font-bold text-accentGold hover:text-yellow-600 transition-colors"
                 >
