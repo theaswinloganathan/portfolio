@@ -10,7 +10,7 @@ const About = () => {
   const paragraph2 = "His expertise in Lean Six Sigma and Design Thinking enables the transformation of complex ideas into effective strategies and measurable outcomes. Through research, consultancy, and mentorship, he is committed to developing future-ready leaders and contributing to academic advancement, industry collaboration, and innovation-driven education.";
 
   return (
-    <section id="about" className="py-24 bg-white dark:bg-dark overflow-hidden">
+    <section id="about" className="py-12 sm:py-24 bg-white dark:bg-dark border-t border-accentGold/20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
