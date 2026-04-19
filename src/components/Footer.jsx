@@ -9,6 +9,7 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <h2 className="text-2xl font-serif font-bold text-gray-900 dark:text-white mb-2">Dr. Vimalnath</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">Assistant Professor | Consultant | Mentor</p>
+            <p className="text-sm font-bold text-accentGold mt-1">+91-9500034681</p>
           </div>
           
           <div className="flex gap-4">

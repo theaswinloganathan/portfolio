@@ -103,10 +103,10 @@ const Experience = () => {
         </div>
 
         <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800" />
+          {/* Vertical Line - Centered on all devices */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800" />
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -114,48 +114,50 @@ const Experience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                  }`}
+                className={`flex items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}
               >
-                {/* Timeline Dot */}
-                <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white dark:border-dark bg-accentGold z-10" />
-
-                {/* Content Card */}
-                <div className={`w-full md:w-[45%] ${index % 2 === 0 ? 'md:pl-12' : 'md:pr-12'} pl-12 md:pl-0`}>
-                  <div className={`p-8 rounded-3xl bg-gray-50 dark:bg-[#0a0f1d] border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-2xl transition-all duration-300 group ${exp.isCurrent ? 'ring-2 ring-accentGold ring-offset-4 ring-offset-white dark:ring-offset-dark' : ''}`}>
-                    <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-accentGold/10 text-accentGold">
+                {/* Content Card - 50% width on all devices */}
+                <div className="w-1/2 px-2 sm:px-8 md:px-12">
+                  <div className={`p-4 sm:p-8 rounded-2xl md:rounded-3xl bg-gray-50 dark:bg-[#0a0f1d] border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-2xl transition-all duration-300 group ${exp.isCurrent ? 'ring-2 ring-accentGold ring-offset-2 dark:ring-offset-dark' : ''}`}>
+                    <div className="flex flex-wrap items-center justify-between gap-1 mb-3">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-accentGold/10 text-accentGold">
                         {exp.type}
                       </span>
-                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                        <Calendar className="w-4 h-4 mr-1.5" />
+                      <div className="flex items-center text-[10px] sm:text-xs text-gray-500 dark:text-gray-400">
+                        <Calendar className="w-3 h-3 mr-1" />
                         {exp.duration}
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-serif font-bold text-gray-900 dark:text-white mb-1 group-hover:text-accentGold transition-colors">
+                    <h3 className="text-sm sm:text-xl md:text-2xl font-serif font-bold text-gray-900 dark:text-white mb-1 group-hover:text-accentGold transition-colors leading-tight">
                       {exp.role}
                     </h3>
-                    <div className="flex items-center text-lg font-medium text-accentBlue dark:text-blue-400 mb-3">
-                      <Briefcase className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-xs sm:text-lg font-medium text-accentBlue dark:text-blue-400 mb-2">
+                      <Briefcase className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                       {exp.company}
                     </div>
 
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-6 pb-6 border-b border-gray-200 dark:border-gray-800">
-                      <MapPin className="w-4 h-4 mr-1.5" />
+                    <div className="flex items-center text-[10px] sm:text-sm text-gray-500 dark:text-gray-400 mb-4 pb-4 border-b border-gray-200 dark:border-gray-800">
+                      <MapPin className="w-3 h-3 mr-1" />
                       {exp.location}
                     </div>
 
-                    <ul className="space-y-3">
+                    <ul className="space-y-2 hidden sm:block">
                       {exp.impact.map((point, i) => (
-                        <li key={i} className="flex items-start text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                          <ChevronRight className="w-4 h-4 mr-2 text-accentGold shrink-0 mt-0.5" />
+                        <li key={i} className="flex items-start text-gray-600 dark:text-gray-400 text-[10px] sm:text-sm leading-relaxed">
+                          <ChevronRight className="w-3 h-3 mr-1 text-accentGold shrink-0 mt-0.5" />
                           {point}
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
+
+                {/* Timeline Dot - Centered */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 sm:border-4 border-white dark:border-dark bg-accentGold z-10" />
+
+                {/* Empty spacer for the other side */}
+                <div className="w-1/2" />
               </motion.div>
             ))}
           </div>
